@@ -188,7 +188,6 @@ def display_data_request(df):
         view_data = input('\nDo you want to view 10 rows of individual trip data? enter yes or no\n').lower()
 
 
-
 def main():
     while True:
         city, month, day = get_filters()
@@ -207,3 +206,5 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
+#--this comment was added just t0 fulfil project 3 requirment. This line means nothing and will not affect the code above.
