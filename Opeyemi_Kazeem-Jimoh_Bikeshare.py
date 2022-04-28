@@ -9,7 +9,6 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
-
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -35,6 +34,7 @@ def get_filters():
 
         else:
             break
+
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     #Asking the user for day of the week
     while True:
@@ -129,9 +129,9 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
-    total_travel_time = df['Trip Duration'].sum
-    print ('\nThe Total travel time of the duration is: {} seconds.'.format(total_travel_time))
+    # TO DO: display total travel time as travel_time
+    travel_time = df['Trip Duration'].sum()
+    print ('\nThe Travel time of the duration is: {} seconds.'.format(travel_time))
 
     # TO DO: display mean travel time // mean trvavel talks about the mean average time calculated from the entire time date
     avg_travel_time = df['Trip Duration'].mean()
@@ -139,6 +139,7 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+
 
 
 def user_stats(df):
@@ -188,7 +189,6 @@ def display_data_request(df):
         view_data = input('\nDo you want to view 10 rows of individual trip data? enter yes or no\n').lower()
 
 
-
 def main():
     while True:
         city, month, day = get_filters()
@@ -207,3 +207,5 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
+#--this comment was added just t0 fulfil project 3 requirment. This line means nothing and will not affect the code above.
