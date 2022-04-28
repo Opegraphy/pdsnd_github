@@ -129,9 +129,9 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
-    total_travel_time = df['Trip Duration'].sum
-    print ('\nThe Total travel time of the duration is: {} seconds.'.format(total_travel_time))
+    # TO DO: display total travel time as travel_time
+    travel_time = df['Trip Duration'].sum()
+    print ('\nThe Travel time of the duration is: {} seconds.'.format(travel_time))
 
     # TO DO: display mean travel time // mean trvavel talks about the mean average time calculated from the entire time date
     avg_travel_time = df['Trip Duration'].mean()
@@ -139,6 +139,7 @@ def trip_duration_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+
 
 
 def user_stats(df):
